@@ -14,11 +14,30 @@ Category Management: Users with an admin role can add new product categories, ed
 
 Security and Authorization: Users can only view their own order and profile information. The admin role may be subject to special authorization and can perform specific functions.
 
-![Ekran görüntüsü 2024-01-26 045405](https://github.com/SametKaanKskn/E-commerce/assets/111184050/a93e7183-c09e-4430-9b5f-c542afeb4f0c)
-
-
 Statistics and Reporting: Users with an admin role can view statistics and generate reports on daily, monthly, yearly, etc. sales, cancellations, and returns.
 
 Technical Requirements: Code Quality (Design, Naming, etc.) API Documentation Validation Error Handling Logging Application Optimization Database Design and Optimization Application Dockerization Authorization and Role Management
 
 At the same time, communication between discount and product service is established with gRPC
+
+
+
+
+![Ekran görüntüsü 2024-01-26 045405](https://github.com/SametKaanKskn/E-commerce/assets/111184050/a93e7183-c09e-4430-9b5f-c542afeb4f0c)
+
+
+
+![Ekran görüntüsü 2024-01-26 050157](https://github.com/SametKaanKskn/E-commerce/assets/111184050/bbc22c83-1b0b-465f-b7c3-4a7c08e882d9)
+
+
+
+![Ekran görüntüsü 2024-01-26 050512](https://github.com/SametKaanKskn/E-commerce/assets/111184050/94308cc4-74d0-4fcc-a7cf-8393d8bb7d84)
+
+
+
+![Ekran görüntüsü 2024-01-26 050851](https://github.com/SametKaanKskn/E-commerce/assets/111184050/6fa2ea73-adec-4c2b-8e68-42154eb4d129)
+
+
+
+
+
