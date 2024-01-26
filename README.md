@@ -14,6 +14,9 @@ Category Management: Users with an admin role can add new product categories, ed
 
 Security and Authorization: Users can only view their own order and profile information. The admin role may be subject to special authorization and can perform specific functions.
 
+![Ekran görüntüsü 2024-01-26 045405](https://github.com/SametKaanKskn/E-commerce/assets/111184050/a93e7183-c09e-4430-9b5f-c542afeb4f0c)
+
+
 Statistics and Reporting: Users with an admin role can view statistics and generate reports on daily, monthly, yearly, etc. sales, cancellations, and returns.
 
 Technical Requirements: Code Quality (Design, Naming, etc.) API Documentation Validation Error Handling Logging Application Optimization Database Design and Optimization Application Dockerization Authorization and Role Management
