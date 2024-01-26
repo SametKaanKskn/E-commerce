@@ -1,0 +1,137 @@
+<!-- Buradaki xs:"XML Schema" ifadesinin kısaltmasıdır.
+<!--  XML Şema, bir XML belgesinin yapısını ve içeriğini tanımlamak için kullanılan bir dilidir -->
+<!-- "xs" öneki, belirli bir ad alanını ifade eder ve XML Şema Dilinin özel öğelerini tanımlamak için standart olarak kullanılır.-->
+<!-- "xmlns" (XML Namespace) XML belgelerinde ad alanlarını tanımlamak için kullanılan bir özelliktir. 
+      Ad alanları, XML belgelerinde öğelerin benzersiz tanımlanmasını sağlar. -->
+
+<!-- <xs:schema>: Bu öğe, XML Şema belgesinin başlangıcını tanımlar.  -->
+<!-- xmlns:xs özelliği, xs önekiyle "http://www.w3.org/2001/XMLSchema" ad alanını (XML Şema'nın standart ad alanı) belirtir.-->
+<!-- xmlns:tns özelliği, tns önekiyle "http://com.springbootrest.allapis" ad alanını belirtir.-->
+<!-- targetNamespace özelliği, bu şemanın hangi ad alanına ait olduğunu belirtir-->
+<!-- targetNamespace özelliği, bu şemanın hangi ad alanına ait olduğunu belirtir.-->
+<!-- elementFormDefault özelliği, öğelerin nitelikle mi yoksa öğe olarak mı kullanılacağını belirtir (bu durumda "qualified" yani nitelik olarak belirtilmiştir).-->
+
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:tns="http://com.springbootrest.allapis"
+    targetNamespace="http://com.springbootrest.allapis"
+    elementFormDefault="qualified">
+
+<!--<xs:complexType name="empoyeeInfo">: Bu öğe, "empoyeeInfo" adında bir karma tür (complex type) tanımlar.
+     Karma tür, XML belgesindeki bir öğenin içinde başka öğeleri içerebilen bir yapıdır-->
+
+<!-- <xs:sequence>: Bu öğe, karma türün içindeki öğelerin sırasını belirtir. Yani, "empoyeeInfo" karma türü 
+    altındaki öğelerin sırasını içerecek olan bir dizi (sequence) tanımlar.-->
+    <xs:complexType name="empoyeeInfo">
+        <xs:sequence>
+        <!--Bu öğe, "employeeId" adında bir öğe tanımlar. Bu öğe bir uzun tamsayı (xs:long) türünde olacak.-->
+        <xs:element name="employeeId" type="xs:long" />
+        <xs:element name="name" type="xs:string" />
+        <xs:element name="department" type="xs:string" />
+        <xs:element name="phone" type="xs:string" />
+        <xs:element name="address" type="xs:string" />
+        <xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="serviceStatus">
+        <xs:sequence>
+        <xs:element name="status" type="xs:string" />
+        <xs:element name="message" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="addEmployeeRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="employeeInfo" type="tns:employeeInfo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="addEmployeeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="serviceStatus" type="tns:serviceStatus" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getEmployeeByIdRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="employeeId" type="xs:long" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getEmployeeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="employeeInfo" type="tns:employeeInfo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="updateEmployeeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="employeeInfo" type="tns:employeeInfo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="updateEmployeeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="serviceStatus" type="tns:serviceStatus"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="deleteEmployeeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="serviceStatus" type="tns:serviceStatus"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+
+
+    
+
+ -->
+
+
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:tns="http://com.sametkagankeskin.com/soapservice"
+    targetNamespace="http://com.sametkagankeskin.com/soapservice"
+    elementFormDefault="qualified">
+
+    <xs:element name="getUserRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getUserResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" type="tns:user" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="user">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="empoId" type="xs:int"/>
+            <xs:element name="salary" type="xs:double"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

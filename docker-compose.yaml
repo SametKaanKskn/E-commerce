@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  ecommerce-postgres:
+    image: postgres
+    container_name: e-commerce_postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: your_password
+      POSTGRES_DB: your_database_name
+    expose:
+      - "54320"
+    ports:
+      - "54320:54320"
+    tmpfs:
+      - /tmp
+      - /run
+      - /run/postgresql
+    volumes:
+      - ecommerce-volume:/var/lib/postgresql/data
+    command: -p 54320
+volumes:
+  ecommerce-volume:
